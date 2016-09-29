@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @beer.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @beer.description %>
+</p>
+
+<p>
+<<<<<<< HEAD
+  <strong>Brewery:</strong>
+  <% @beer.brewerie.name %>
+</p>
+
+<p>
+  <strong>Moyenne note:</strong>
+  <%= @beer.avg %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>BeerGeek</th>
+      <th>Note</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @beer.notes.each do |note| %>
+      <tr>
+        <td><%= note.beer_geek.nom %></td>
+        <td><%= note.star %></td>	
+    <% end %>
+  </tbody>
+</table>
+
+
+=======
+  <strong>Note:</strong>
+  <%= @beer.note %>
+</p>
+
+>>>>>>> 2cf052c9e595f98954cb5f8661b549d1d8903676
+<%= link_to 'Edit', edit_beer_path(@beer) %> |
+<%= link_to 'Back', beers_path %>
